@@ -204,10 +204,12 @@ git push origin main --tags
 gh release create v1.0.0 --title "Ledger v1.0.0" --notes-file CHANGELOG.md
 ```
 
-The GitHub release is source-only. Do **not** upload
-`release/ledger-1.0.0-release.apk`: it is a locally generated, debug-signed test
-artifact, not a production store build. Store binaries come from EAS with the
-production profile and the publisher's upload keystore.
+The GitHub release for `v1.0.0` includes two clearly labeled, debug-signed test
+artifacts: `ledger-1.0.0-test-debug.apk` and `ledger-1.0.0-test-debug.aab`.
+Do **not** upload `release/ledger-1.0.0-release.apk`: it is the stale October 18
+APK with package `com.runarine.ledger`. The attached test artifacts are not
+production store builds. Store binaries come from EAS with the production profile
+and the publisher's upload keystore.
 
 ---
 

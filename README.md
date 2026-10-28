@@ -10,7 +10,7 @@ There is no backend and no account to create. Every number you see is computed o
 device from data stored on the device, and the app makes no network calls.
 
 Current release: **[1.0.0](https://github.com/reyi06/ledger/releases/tag/v1.0.0)** -
-source-only; no APK or AAB is attached.
+test Android APK/AAB attached; both are debug-signed and not store builds.
 
 ---
 

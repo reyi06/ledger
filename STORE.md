@@ -13,8 +13,8 @@ question; it does not replace the Play Console account, upload key or listing as
 
 | # | Blocker | Why it matters |
 |---|---|---|
-| 1 | **An upload keystore** | The release APK is signed with the Android debug key (`CN=Android Debug`). Play rejects it. The key must be yours — generating one on your behalf would lock the listing to a secret you do not hold. |
-| 2 | **An `.aab`, not an `.apk`** | Play has required an Android App Bundle for new apps since August 2021. An APK upload is refused outright. |
+| 1 | **An upload keystore** | The attached test APK and AAB are signed with the Android debug key (`CN=Android Debug`). Play rejects them. The key must be yours — generating one on your behalf would lock the listing to a secret you do not hold. |
+| 2 | **A store-signed `.aab`** | The attached `ledger-1.0.0-test-debug.aab` is debug-signed and is not a Play upload. Play has required an Android App Bundle for new apps since August 2021; the bundle must be signed with your upload key. |
 | 3 | ~~The package name~~ | **Resolved: `com.reyi06.ledger`**, set in `app.json` for both Android and iOS. It is permanent once published. |
 | 4 | **A privacy policy URL** | The policy is drafted in [`PRIVACY.md`](./PRIVACY.md). Play needs a public, hosted URL; the content is short because nothing leaves the device. |
 | 5 | **A Play Console account** | One-time $25, tied to your Google account. |
