@@ -1,0 +1,88 @@
+/**
+ * Browser surfaces.
+ *
+ * The parts of a page nobody draws still carry the design: selection colour, the
+ * caret, scrollbars, focus rings and underline offset all ship with defaults that
+ * belong to no design system. Theming them from the palette is the cheapest
+ * signal that a page was built rather than assembled.
+ *
+ * These apply to the web target only; native ignores them.
+ */
+
+:root {
+  /* Botanical palette, mirrored for the browser chrome. */
+  --ink: #2d3a31;
+  --paper: #f9f8f4;
+  --rule-light: #e6e2da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #efede6;
+    --paper: #171c18;
+    --rule-light: #313831;
+  }
+}
+
+html,
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+}
+
+/* Selection is an inversion, the same emphasis device used in the UI. */
+::selection {
+  background-color: var(--ink);
+  color: var(--paper);
+}
+
+/* The caret belongs to the palette too. */
+input,
+textarea,
+[contenteditable='true'] {
+  caret-color: var(--ink);
+}
+
+/* Underlines sit clear of descenders rather than colliding with them. */
+a,
+[role='link'] {
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1px;
+}
+
+/* A scrollbar drawn from the palette, not the platform's. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ink) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--ink);
+  border: 3px solid var(--paper);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--ink);
+}
+
+/* Focus is a hard rule, matching the border-thickening used inside the app.
+   Text inputs are excluded: the system prescribes a border change for them
+   instead of a ring, and an outline would double up on that treatment. */
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}

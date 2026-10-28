@@ -1,0 +1,87 @@
+name: Bug report
+description: Report a reproducible problem with Ledger.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Remove personal ledger data, PINs, tokens and signing keys from screenshots and logs before submitting.
+
+        For a security issue, do not open a public issue. Use the private process in SECURITY.md.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: A clear description of the bug and its impact.
+      placeholder: When I ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the smallest sequence that reliably reproduces the problem.
+      placeholder: |
+        1. Open ...
+        2. Tap ...
+        3. See ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect instead?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Android
+        - iOS
+        - Web
+        - More than one platform
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Ledger version
+      description: The version shown in Settings, or the commit/tag you built.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS version, device/emulator, Expo SDK version, and whether this was Expo Go, a development build or a release build.
+      placeholder: "Android 15, Pixel 8, Expo SDK 58, release APK"
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs or screenshots
+      description: Paste only the relevant lines. Redact personal data.
+      render: shell
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have removed personal ledger data, credentials and signing keys from this report.
+          required: true
+        - label: I searched existing issues for the same problem.
+          required: true

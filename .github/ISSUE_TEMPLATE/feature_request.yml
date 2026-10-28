@@ -1,0 +1,58 @@
+name: Feature request
+description: Suggest a focused improvement to Ledger.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ledger is deliberately offline-first. Proposals that add a network call, analytics or telemetry need to explain the privacy and store-declaration impact, and they may be declined to keep the product's architecture intact.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user problem does this solve? Describe the situation, not just the implementation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the smallest change that would solve the problem.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What other approaches did you consider, including doing nothing?
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Overview
+        - Activity
+        - Budgets
+        - Insights
+        - Assistant
+        - Accounts and transfers
+        - Recurring rules
+        - Settings and accessibility
+        - Export
+        - Documentation or build
+        - Other
+
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Constraints
+      options:
+        - label: This can work without a backend or a network request.
+          required: true
+        - label: I have searched existing issues and discussions for this idea.
+          required: true
