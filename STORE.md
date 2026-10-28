@@ -1,7 +1,8 @@
 # Play Store release
 
-Status: **not submittable yet.** The app is complete and verified; what remains is
-mostly credentials and assets that belong to the publisher, not to the code.
+Status: **not submittable yet.** The app is complete; Android and web paths are
+verified, while iOS remains unverified. What remains is mostly credentials and
+assets that belong to the publisher, not to the code.
 
 The source is public under the MIT license. That resolves the code licensing
 question; it does not replace the Play Console account, upload key or listing assets.

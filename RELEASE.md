@@ -1,7 +1,8 @@
 # Release
 
-Release guide for Ledger 1.0.0. The app is verified and ready to build; the
-remaining store work is publisher credentials and store assets.
+Release guide for Ledger 1.0.0. Android and web paths have been exercised; iOS
+remains unverified. The remaining store work is publisher credentials, a signed
+build, and store assets.
 
 ## Current identity
 
